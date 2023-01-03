@@ -1,0 +1,11 @@
+#! /bin/bash
+
+mkdir "solutions/${1}"
+
+touch "solutions/${1}/input"
+touch "solutions/${1}/main.rb"
+echo "# frozen_string_literal: true
+
+module Problem${1}
+  def self.run(_) end
+end" > "solutions/${1}/main.rb"
