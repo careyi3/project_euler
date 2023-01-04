@@ -8,12 +8,12 @@ module Problem5
     until all_factored
       num += increment
       factored = 0
-      (11..20).each do |factor|
+      (11..16).each do |factor|
         break unless (num % factor).zero?
 
         factored += 1
       end
-      all_factored = (factored == 10)
+      all_factored = (factored == 6)
     end
     puts num
   end
