@@ -11,4 +11,21 @@ module Primes
     end
     primes
   end
+
+  def self.sieve(limit)
+    nums = Array.new(limit + 1) { true }
+    nums.each_with_index do |val, idx|
+      next if idx < 2
+      next unless val
+
+      (idx + 1..nums.size).each do |iidx|
+        nums[iidx] = false if (iidx % idx).zero?
+      end
+    end
+    primes = []
+    nums.each_with_index do |val, idx|
+      primes << idx if val && idx > 1
+    end
+    primes
+  end
 end
