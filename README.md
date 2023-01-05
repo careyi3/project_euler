@@ -2,7 +2,7 @@
 
 My solutions to Project Euler written in Ruby.
 
-![careyi3 project euler badge](https://projecteuler.net/profile/careyi3.png).
+![careyi3 project euler badge](https://projecteuler.net/profile/careyi3.png?).
 
 ## Instructions
 
