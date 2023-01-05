@@ -18,8 +18,12 @@ module Primes
       next if idx < 2
       next unless val
 
-      (idx + 1..nums.size).each do |iidx|
-        nums[iidx] = false if (iidx % idx).zero?
+      num = idx
+      while num < limit
+        num += idx
+        break if num > limit
+
+        nums[num] = false
       end
     end
     primes = []
